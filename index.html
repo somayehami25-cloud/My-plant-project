@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title> Plant shop</title> <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header class="header">
+    <div class="logo">
+        <span class="logo-icon">🌱</span>Plant shop
+    </div>
+    <button class="cart-btn" id="cart-btn">🛒cart (0)</button>
+</header>
+<nav class="menu" id="menu">
+    <button class="menu-pill active" data-category="all">All</button>
+    <button class="menu-pill" data-category="plants">Plants</button>
+    <button class="menu-pill" data-category="pots">Pots</button>
+    <button class="menu-pill" data-category="tools">Tools</button>
+</nav>
+<div class="toolbar">
+    <input type="text" class="search-input" placeholder="🔎 Sarch plants..." id="seach-input">
+    <div class="sort-dropdown">
+    </div>
+    Sort by ↓
+
+</div>
+<main class="product-grid" id="product-grid">
+
+</main>
+<footer class="footer">
+    <p>Made by Somi.2026</p>
+    <p>A mini project</p>
+</footer>
+<script src="products.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
