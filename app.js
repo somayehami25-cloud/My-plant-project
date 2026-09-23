@@ -36,3 +36,29 @@ menuButtons.forEach(button => {
          }
     });
 })
+
+const searchInput = document.querySelector('.search-input');
+searchInput.addEventListener('input' , (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+    const filtered = products.filter(product =>
+        product.name.toLowerCase().includes(searchTerm)
+    );
+    renderProducts(filtered);
+})
+
+const sortDropdown = document.getElementById('sort-dropdown');
+
+sortDropdown.addEventListener('change', (e) => {
+    const sortValue = e.target.value;
+    let sortedProducts = [...products]; 
+
+    if (sortValue === 'price-low') {
+        sortedProducts.sort((a, b) => a.price - b.price);
+    } else if (sortValue === 'price-high') {
+        sortedProducts.sort((a, b) => b.price - a.price);
+    } else if (sortValue === 'rating') {
+        sortedProducts.sort((a, b) => b.rating - a.rating);
+    }
+    
+    renderProducts(sortedProducts); 
+});

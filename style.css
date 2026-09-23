@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
 }
+
 body{
     font-family: 'Poppins' , sans-serif;
     background-color: #e4e1be;
@@ -84,6 +85,7 @@ background-color: rgba(22, 52, 42, 0.05);
     display: flex;
     justify-content: space-between;
     gap: 16px;
+    width: 100%;
     padding: 0 22px 14px;
 }
 
@@ -116,6 +118,12 @@ background-color: rgba(22, 52, 42, 0.05);
     background-color: #fff;
     cursor: pointer;
     white-space: nowrap;
+    transition: 0.2s;
+}
+
+.sort-dropdown:hover {
+    background-color: #f2ebd8;
+    color: #16342a;
 }
 
 .product-grid {

@@ -7,7 +7,7 @@
 </head>
 
 <body>
-<header class="header">
+<header class ="header">
     <div class="logo">
         <span class="logo-icon">🌱</span>Plant shop
     </div>
@@ -21,11 +21,14 @@
 </nav>
 <div class="toolbar">
     <input type="text" class="search-input" placeholder="🔎 Sarch plants..." id="seach-input">
-    <div class="sort-dropdown">
-    </div>
-    Sort by ↓
 
-</div>
+       <select id="sort-dropdown" class="sort-dropdown">
+        <option value="default">Sort by</option>
+        <option value="price-low">Price: Low to High</option>
+        <option value="price-high">Price High to Low</option>
+        <option value="rating">Top Rated</option>
+       </select>
+    </div>
 <main class="product-grid" id="product-grid">
 
 </main>
@@ -33,6 +36,7 @@
     <p>Made by Somi.2026</p>
     <p>A mini project</p>
 </footer>
+
 <script src="products.js"></script>
 <script src="app.js"></script>
 </body>
