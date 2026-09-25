@@ -37,6 +37,26 @@
     <p>A mini project</p>
 </footer>
 
+<div class="cart-modal hidden" id="cart-modal">
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-content">
+        <div class="cart-header">
+            <h2>Your cart</h2>
+            <button class="close-cart-btn" id="close-cart-btn">×</button>
+        </div>
+        <div class="cart-body" id="cart-body">
+           
+        </div>
+        <div class="cart-footer" id="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cart-total-price">$0</span>
+            </div>
+            <button class="clear-cart-btn" id="clear-cart-btn">Clear cart</button>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+</div>
 <script src="products.js"></script>
 <script src="app.js"></script>
 </body>
