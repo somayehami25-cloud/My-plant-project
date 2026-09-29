@@ -128,10 +128,11 @@ background-color: rgba(22, 52, 42, 0.05);
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 16px;
     padding: 0 22px 22px;
     flex: 1;
+    align-content: start;
 }
 
 .card{
@@ -152,6 +153,7 @@ background-color: rgba(22, 52, 42, 0.05);
     }
 
     .card-image-panel {
+        display: flex;
         background-color: #e4e1be;
         border-radius: 8px;
         height: 110px;
@@ -497,10 +499,6 @@ background-color: rgba(22, 52, 42, 0.05);
     .header {
         justify-content: space-between;
         padding: 14px 16px;
-    }
-
-    .product-grid {
-        grid-template-columns: 1fr;
     }
 
     .toolbar {
