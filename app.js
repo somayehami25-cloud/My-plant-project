@@ -141,3 +141,43 @@ clearCartBtn.addEventListener('click' , () => {
     cart = [];
     renderCart();
 });
+
+
+
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const menuOverlay = document.getElementById('menu-overlay');
+const closeMenuBtn = document.getElementById('close-menu-btn');
+const menuLinks = document.querySelectorAll('.menu-link');
+
+
+hamburgerBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('hidden');
+});
+
+closeMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+});
+
+menuOverlay.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+});
+
+menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+    
+        menuLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+
+
+        const category = link.getAttribute('data-category');
+        if (category === 'all') {
+            renderProducts(products);
+        } else {
+            const filtered = products.filter(product => product.category === category);
+            renderProducts(filtered);
+        }
+
+        mobileMenu.classList.add('hidden');
+    });
+});
