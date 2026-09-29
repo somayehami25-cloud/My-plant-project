@@ -4,7 +4,7 @@
 
 const products = [
   { id: 1,  name: "Monstera",        category: "plants", price: 34, emoji: "🌿", rating: 4.8 },
-  { id: 2,  name: "Snake Plant",     category: "plants", price: 18, emoji: "🪴", rating: 4.9 },
+  { id: 2,  name: "shamrock ",     category: "plants", price: 18, emoji: "☘", rating: 4.9 },
   { id: 3,  name: "Pothos",          category: "plants", price: 12, emoji: "🍃", rating: 4.7 },
   { id: 4,  name: "Peace Lily",      category: "plants", price: 22, emoji: "🌸", rating: 4.5 },
 

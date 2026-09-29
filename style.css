@@ -365,7 +365,7 @@ background-color: rgba(22, 52, 42, 0.05);
     background-color: transparent;
     color: #16342A;
     border: 1px solid #cbd8c9;
-    border: 8px;
+    border-radius: 8px;
     padding: 10px 20px;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
@@ -379,5 +379,153 @@ background-color: rgba(22, 52, 42, 0.05);
     background-color: #E8B22C;
     color: #16342A;
     border-color: #E8B22C;
-    
+}
+
+
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 0 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.hamburger-btn span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: 0.2s;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+}
+
+.mobile-menu.hidden {
+    display: none;
+}
+
+.menu-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(22, 52, 42, 0.7);
+    cursor: pointer;
+}
+
+
+.menu-content {
+    background-color: #FFFFFF;
+    width: 80%;
+    max-width: 300px;
+    height: 100%;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    z-index: 1001;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+    color: #16342A;
+}
+
+.close-menu-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #6E7F74;
+}
+
+.menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.menu-link {
+    background: none;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    padding: 10px 16px;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #16342A;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.menu-link.active {
+    background-color: #E8B22C;
+    border-color: #E8B22C;
+}
+
+@media (max-width: 700px) {
+    .menu {
+        display: none;
+    }
+
+    .hamburger-btn {
+        display: flex;
+    }
+
+    .header {
+        justify-content: space-between;
+        padding: 14px 16px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .toolbar {
+        flex-direction: column;
+    }
+
+    .card {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .card-image-panel {
+        width: 80px;
+        height: 80px;
+        flex-shrink: 0;
+        font-size: 32px;
+    }
+
+    .card-name, .card-rating, .card-price {
+        text-align: left;
+    }
+
+    .add-to-cart-btn {
+        width: auto;
+        padding: 8px 16px;
+        margin-top: 0;
+    }
 }
